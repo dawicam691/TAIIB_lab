@@ -1,0 +1,71 @@
+
+  <table border="1">
+    <tr>
+      <td>
+        id
+      </td>
+      <td>
+        Nazwa
+      </td>
+      <td>
+        Opis
+      </td>
+      <td>
+        Cena
+      </td>
+      <td>
+        Dodanie produktu
+      </td>
+    </tr>
+    <tr *ngFor="let o of data">
+      <td>
+        {{o.id}}
+      </td>
+      <td>
+        {{o.name}}
+      </td>
+      <td>
+        {{o.description}}
+      </td>
+      <td>
+        {{o.price}}
+      </td>
+      <td>
+        <button (click)="dodajProdukt(o)" name={{o.id}} >dodaj do koszyka</button>
+        <button (click)="edytujClick(o)" name={{o.id}} >edytuj</button>
+        <button (click)="usun(o)" name="{{o.id}}"> Usuń</button>
+      </td>
+    </tr>
+  </table>
+<p>Koszyk:</p>
+
+<table border="1">
+    <tr>
+      <td>
+        id
+      </td>
+      <td>
+        Nazwa
+      </td>
+      <td>
+        Opis
+      </td>
+      <td>
+        Cena
+      </td>
+    </tr>
+    <tr *ngFor="let b of basket">
+      <td>
+        {{b.id}}
+      </td>
+      <td>
+        {{b.name}}
+      </td>
+      <td>
+        {{b.description}}
+      </td>
+      <td>
+        {{b.price}}
+      </td>
+    </tr>
+  </table>

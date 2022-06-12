@@ -1,0 +1,26 @@
+<form *ngIf="product !=null" #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+    <div>
+        <label for="name">nazwa</label>
+        <input type="text" id="name" name="name" [(ngModel)]="product.name"/>
+    </div>
+    
+    <div>
+        <label for="name">Opis</label>
+        <input type="text" id="description" name="description" [(ngModel)]="product.description"/>
+    </div>
+    
+    <div>
+        <label for="name">Cena</label>
+    <input type="text" id="price" [(ngModel)]="product.price"/>
+    </div>
+    
+
+
+    <div>
+        <button type="submit">Zapisz</button>
+    </div>
+</form>
+
+<div *ngIf="product ==null">
+    Wczytywanie
+</div>

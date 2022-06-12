@@ -1,0 +1,28 @@
+
+<div *ngFor="let t of producty">
+    
+    <app-product [data]="t">
+
+    </app-product>
+<!--
+    <app-products [data]="t">
+
+    </app-products>
+    -->
+
+
+    
+    <button (click)="dodajClick(t)">+</button>
+</div>
+
+<div>
+    <label for="page"> Strona: </label>
+    <input id="page" name="page" type="number" [(ngModel)]="page"/>
+</div>
+
+<div>
+    <label for="rowsPerPage"> Liczba elementów na stronie: </label>
+    <input id="rowsPerPage" name="rowsPerPage" type="number"[(ngModel)]="rowsPerPage"/>
+</div>
+
+<button (click)="refresh()">Odświerz</button>
